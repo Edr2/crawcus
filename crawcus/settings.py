@@ -15,11 +15,22 @@ SPIDER_MODULES = ['crawcus.spiders']
 NEWSPIDER_MODULE = 'crawcus.spiders'
 
 
+DOWNLOAD_TIMEOUT = 6400      # 2 hours
+
+DOWNLOAD_MAXSIZE = 0
+DOWNLOAD_WARNSIZE = 2000*1024*1024  # ~2GB
+
+IMAGES_FOLDER = 'images/'
+FILES_STORE = 'images'
+
+ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'crawcus (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
