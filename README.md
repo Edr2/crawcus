@@ -6,3 +6,6 @@ setup project:
 python3 -m venv venv  
 pip install -r requirements.txt  
 scrapy crawl images  
+
+install db if it not exist:
+python create_simple_db.py
