@@ -1,5 +1,5 @@
 import logging
-from image_spider import ImageSpider
+from spiders.image_spider import ImageSpider
 logging.basicConfig(level=logging.DEBUG)
 
 

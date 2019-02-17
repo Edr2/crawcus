@@ -1,7 +1,7 @@
 import requests
 import sys
 from bs4 import BeautifulSoup
-from spider import Spider
+from spiders.spider import Spider
 from models.factory_image import FactoryImage
 
 
