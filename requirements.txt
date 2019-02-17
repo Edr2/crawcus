@@ -1,4 +1,3 @@
-scrapy
 sqlalchemy
 requests
 beautifulsoup4
