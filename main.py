@@ -3,14 +3,10 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 
-def main():
-    spider = ImageSpider()
-    spider.parse()
-
-
 if __name__ == "__main__":
     try:
-        main()
+        spider = ImageSpider()
+        spider.parse()
     except KeyboardInterrupt:
         logger = logging.getLogger(__name__)
-        logger.info('------------------DEBUG Image------------------')
+        logger.info('------------------Closing spider (shutdown)------------------')
