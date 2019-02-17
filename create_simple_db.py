@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
-from base import Base
+from db.base import Base
 #we need to import this FactoryImage for scheme creation
-from factory_image import FactoryImage
+from models.factory_image import FactoryImage
 
 # Create an engine that stores data in the local directory's
 # sqlalchemy_example.db file.

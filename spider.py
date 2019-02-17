@@ -1,5 +1,5 @@
 import logging
-from base import Session
+from db.base import Session
 
 
 class Spider:

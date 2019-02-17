@@ -2,8 +2,7 @@ import requests
 import sys
 from bs4 import BeautifulSoup
 from spider import Spider
-from factory_image import FactoryImage
-from crawcus.settings import IMAGES_FOLDER
+from models.factory_image import FactoryImage
 
 
 class ImageSpider(Spider):
@@ -44,7 +43,7 @@ class ImageSpider(Spider):
         response = requests.get(url, stream=True)
         total_length = response.headers.get('content-length')
 
-        path = IMAGES_FOLDER + local_filename
+        path = 'images/' + local_filename
 
         self.logger.info('Downloading... %s', local_filename)
         with open(path, 'wb') as f:
