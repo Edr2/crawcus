@@ -1,11 +1,6 @@
-import requests
-from bs4 import BeautifulSoup
 from image_spider import ImageSpider
 import logging
 logging.basicConfig(level=logging.DEBUG)
-# logger = logging.getLogger(__name__)
-
-# logger.info('Start reading database')
 
 
 def main():
@@ -14,4 +9,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        logger = logging.getLogger(__name__)
+        logger.info('------------------DEBUG Image------------------')
